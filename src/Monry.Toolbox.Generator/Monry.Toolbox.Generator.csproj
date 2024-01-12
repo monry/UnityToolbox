@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <LangVersion>12</LangVersion>
+
+        <EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
+        <IsRoslynComponent>true</IsRoslynComponent>
+        <AnalyzerLanguage>cs</AnalyzerLanguage>
+
+        <RootNamespace>Monry.Toolbox</RootNamespace>
+
+        <UnityProjectName>Monry.Toolbox</UnityProjectName>
+        <UnityProjectPluginsPath>/Assets/Toolbox/Plugins/</UnityProjectPluginsPath>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Include="..\Monry.Toolbox\Assets\Toolbox\Runtime\Scripts\Attributes\CommandPublishableAttribute.cs" Link="CommandPublishableAttribute.cs" />
+        <Compile Include="..\Monry.Toolbox\Assets\Toolbox\Runtime\Scripts\Attributes\ConfigureComponentAttribute.cs" Link="ConfigureComponentAttribute.cs" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.4">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.3.1"/>
+        <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="4.3.1"/>
+    </ItemGroup>
+
+    <!-- Copy built dll into Unity project -->
+    <Target Name="PostEvent" AfterTargets="PostBuildEvent">
+        <Copy SourceFiles="$(ProjectDir)$(OutDir)$(TargetFileName)" DestinationFolder="$(ProjectDir)../$(UnityProjectName)$(UnityProjectPluginsPath)" />
+    </Target>
+
+</Project>
