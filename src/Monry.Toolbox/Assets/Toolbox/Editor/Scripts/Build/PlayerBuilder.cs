@@ -70,6 +70,7 @@ public static class PlayerBuilder
     private static void PrepareBuild()
     {
         EditorUserBuildSettings.macOSXcodeBuildConfig = EditorUserBuildSettings.development ? XcodeBuildConfig.Debug : XcodeBuildConfig.Release;
+        EditorUserBuildSettings.iOSXcodeBuildConfig = EditorUserBuildSettings.development ? XcodeBuildConfig.Debug : XcodeBuildConfig.Release;
     }
 
     private static BuildPlayerOptions CreateBuildPlayerOptions()
@@ -94,7 +95,7 @@ public static class PlayerBuilder
                 .Select(x => x.path)
                 .ToArray(),
             locationPathName = CreateBuildPath(),
-            target = BuildTarget.StandaloneOSX,
+            target = EditorUserBuildSettings.activeBuildTarget,
             options = buildOptions,
         };
     }
