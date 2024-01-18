@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
+using System.Text.Json;
 using Monry.Toolbox.Editor.Extensions;
 using Monry.Toolbox.Editor.Model;
 using UnityEditor;
@@ -16,6 +18,10 @@ public static class PlayerBuilder
     {
         [true]  = "development",
         [false] = "production",
+    };
+    private static JsonSerializerOptions JsonSerializerOptions { get; } = new()
+    {
+        WriteIndented = true,
     };
 
     [MenuItem("Build/Player/Build", priority = MenuPriorities.Build_Player_BuildOnly)]
@@ -38,7 +44,9 @@ public static class PlayerBuilder
     private static BuildReport Build()
     {
         PrepareBuild();
-        return BuildPipeline.BuildPlayer(CreateBuildPlayerOptions());
+        var buildReport = BuildPipeline.BuildPlayer(CreateBuildPlayerOptions());
+        File.WriteAllText("build-report.json", JsonSerializer.Serialize(buildReport, JsonSerializerOptions));
+        return buildReport;
     }
 
     private static void Run(string path)
