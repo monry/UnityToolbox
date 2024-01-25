@@ -7,6 +7,18 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Monry.Toolbox.Generator", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Monry.Toolbox.Generator.Sample", "src\Monry.Toolbox.Generator.Sample\Monry.Toolbox.Generator.Sample.csproj", "{23C32ADD-BA46-483F-BACC-11A334D460BF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Monry.Toolbox", "src\Monry.Toolbox\Monry.Toolbox.csproj", "{7D97C4E1-8AA1-2A13-88F0-CB228F279093}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "R3.Unity", "src\Monry.Toolbox\R3.Unity.csproj", "{61CB5B55-A19F-28E9-D249-2EA65FF05F26}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniTask", "src\Monry.Toolbox\UniTask.csproj", "{85AE0736-71ED-7EC1-9BFB-CCF7662C456F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VContainer", "src\Monry.Toolbox\VContainer.csproj", "{5AA58F85-1AAE-256D-ED68-D8EA1EDDE4D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VitalRouter", "src\Monry.Toolbox\VitalRouter.csproj", "{AFE6629A-C061-50D6-9B48-FE16360D8ED9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZLogger.Unity", "src\Monry.Toolbox\ZLogger.Unity.csproj", "{3DE25A69-3A75-38D1-25C9-848985A4B835}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +36,29 @@ Global
 		{23C32ADD-BA46-483F-BACC-11A334D460BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23C32ADD-BA46-483F-BACC-11A334D460BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23C32ADD-BA46-483F-BACC-11A334D460BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D97C4E1-8AA1-2A13-88F0-CB228F279093}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D97C4E1-8AA1-2A13-88F0-CB228F279093}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D97C4E1-8AA1-2A13-88F0-CB228F279093}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D97C4E1-8AA1-2A13-88F0-CB228F279093}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{61CB5B55-A19F-28E9-D249-2EA65FF05F26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61CB5B55-A19F-28E9-D249-2EA65FF05F26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61CB5B55-A19F-28E9-D249-2EA65FF05F26}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{61CB5B55-A19F-28E9-D249-2EA65FF05F26}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{85AE0736-71ED-7EC1-9BFB-CCF7662C456F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85AE0736-71ED-7EC1-9BFB-CCF7662C456F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85AE0736-71ED-7EC1-9BFB-CCF7662C456F}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{85AE0736-71ED-7EC1-9BFB-CCF7662C456F}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{5AA58F85-1AAE-256D-ED68-D8EA1EDDE4D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AA58F85-1AAE-256D-ED68-D8EA1EDDE4D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AA58F85-1AAE-256D-ED68-D8EA1EDDE4D5}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AA58F85-1AAE-256D-ED68-D8EA1EDDE4D5}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{AFE6629A-C061-50D6-9B48-FE16360D8ED9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFE6629A-C061-50D6-9B48-FE16360D8ED9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFE6629A-C061-50D6-9B48-FE16360D8ED9}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFE6629A-C061-50D6-9B48-FE16360D8ED9}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{3DE25A69-3A75-38D1-25C9-848985A4B835}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DE25A69-3A75-38D1-25C9-848985A4B835}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DE25A69-3A75-38D1-25C9-848985A4B835}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DE25A69-3A75-38D1-25C9-848985A4B835}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 EndGlobal
