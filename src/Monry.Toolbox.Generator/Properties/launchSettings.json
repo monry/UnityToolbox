@@ -1,9 +1,0 @@
-{
-  "$schema": "http://json.schemastore.org/launchsettings.json",
-  "profiles": {
-    "Debug Generator": {
-      "commandName": "DebugRoslynComponent",
-      "targetProject": "../Monry.Toolbox.Generator.Sample/Monry.Toolbox.Generator.Sample.csproj"
-    }
-  }
-}
