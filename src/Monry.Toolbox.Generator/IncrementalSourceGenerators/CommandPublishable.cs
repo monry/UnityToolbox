@@ -1,9 +1,9 @@
 using Microsoft.CodeAnalysis;
 
-namespace Monry.Toolbox.Generator;
+namespace Monry.Toolbox.IncrementalSourceGenerators;
 
 [Generator(LanguageNames.CSharp)]
-public class CommandPublishableIncrementalSourceGenerator : IIncrementalGenerator
+public class CommandPublishable : IIncrementalGenerator
 {
     private const string Namespace = "Monry.Toolbox.Attributes";
     private const string AttributeName = "CommandPublishableAttribute";
@@ -17,7 +17,27 @@ public class CommandPublishableIncrementalSourceGenerator : IIncrementalGenerato
                 (_, _) => true,
                 (syntaxContext, _) => syntaxContext
             );
+        context.RegisterPostInitializationOutput(OnPostInitialization);
         context.RegisterSourceOutput(source, Emit);
+    }
+
+    private static void OnPostInitialization(IncrementalGeneratorPostInitializationContext context)
+    {
+        context.CancellationToken.ThrowIfCancellationRequested();
+        context.AddSource(
+            AttributeName,
+            $$"""
+            namespace {{Namespace}}
+            {
+                [System.AttributeUsage(System.AttributeTargets.Class, Inherited = false, AllowMultiple = false)]
+                sealed class {{AttributeName}} : System.Attribute
+                {
+                    public {{AttributeName}}()
+                    {
+                    }
+                }
+            }
+            """);
     }
 
     private static void Emit(SourceProductionContext context, GeneratorAttributeSyntaxContext syntaxContext)

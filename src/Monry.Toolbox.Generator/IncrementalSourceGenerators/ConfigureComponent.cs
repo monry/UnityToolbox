@@ -1,9 +1,9 @@
 using Microsoft.CodeAnalysis;
 
-namespace Monry.Toolbox;
+namespace Monry.Toolbox.IncrementalSourceGenerators;
 
 [Generator(LanguageNames.CSharp)]
-public class ConfigureComponentIncrementalSourceGenerator : IIncrementalGenerator
+public class ConfigureComponent : IIncrementalGenerator
 {
     private const string Namespace = "Monry.Toolbox.Attributes";
     private const string AttributeName = "ConfigureComponentAttribute";
