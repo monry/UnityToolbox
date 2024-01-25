@@ -1,9 +1,0 @@
-
-# 環境依存
-
-/.azure
-/.env
-*.DotSettings.user
-# bicep build-param の成果物
-# .bicepparam で指定した環境変数の中身が展開されてしまうので無視する
-/config/azure/main.json
