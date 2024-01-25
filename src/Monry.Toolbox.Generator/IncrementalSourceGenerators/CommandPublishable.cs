@@ -26,6 +26,7 @@ public class CommandPublishable : IIncrementalGenerator
         context.CancellationToken.ThrowIfCancellationRequested();
         context.AddSource(
             AttributeName,
+            // lang=csharp
             $$"""
             namespace {{Namespace}}
             {

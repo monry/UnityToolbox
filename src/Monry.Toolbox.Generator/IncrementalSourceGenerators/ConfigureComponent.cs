@@ -17,7 +17,32 @@ public class ConfigureComponent : IIncrementalGenerator
                 (_, _) => true,
                 (syntaxContext, _) => syntaxContext
             );
+        context.RegisterPostInitializationOutput(OnPostInitialization);
         context.RegisterSourceOutput(source, Emit);
+    }
+
+    private static void OnPostInitialization(IncrementalGeneratorPostInitializationContext context)
+    {
+        context.CancellationToken.ThrowIfCancellationRequested();
+        context.AddSource(
+            AttributeName,
+            // lang=csharp
+            $$"""
+            namespace {{Namespace}}
+            {
+                [System.AttributeUsage(System.AttributeTargets.Class, Inherited = false, AllowMultiple = false)]
+                sealed class {{AttributeName}} : System.Attribute
+                {
+                    public {{AttributeName}}(params string[] fieldNames)
+                    {
+                        FieldNames = fieldNames;
+                    }
+            
+                    public IEnumerable<string> FieldNames { get; }
+                    public bool ShouldAutoInject { get; set; }
+                }
+            }
+            """);
     }
 
     private static void Emit(SourceProductionContext context, GeneratorAttributeSyntaxContext syntaxContext)
