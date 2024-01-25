@@ -38,7 +38,7 @@ public class ConfigureComponent : IIncrementalGenerator
                         FieldNames = fieldNames;
                     }
             
-                    public IEnumerable<string> FieldNames { get; }
+                    public System.Collections.Generic.IEnumerable<string> FieldNames { get; }
                     public bool ShouldAutoInject { get; set; }
                 }
             }
