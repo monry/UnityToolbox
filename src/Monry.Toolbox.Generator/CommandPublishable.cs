@@ -1,6 +1,6 @@
 using Microsoft.CodeAnalysis;
 
-namespace Monry.Toolbox.IncrementalSourceGenerators;
+namespace Monry.Toolbox.Generator;
 
 [Generator(LanguageNames.CSharp)]
 public class CommandPublishable : IIncrementalGenerator
