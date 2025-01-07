@@ -1,32 +1,34 @@
 {
   "dependencies": {
     "com.cysharp.r3": {
-      "version": "git+ssh://git@github.com/Cysharp/R3.git?path=src/R3.Unity/Assets/R3.Unity#0.1.1",
+      "version": "git+ssh://git@github.com/Cysharp/R3.git?path=src/R3.Unity/Assets/R3.Unity#1.2.9",
       "depth": 0,
       "source": "git",
-      "dependencies": {},
-      "hash": "16942f56e6a0cfae20211ebfc9eb67db264a3061"
+      "dependencies": {
+        "com.unity.modules.imgui": "1.0.0"
+      },
+      "hash": "9b18209448c5e1f4572a4191b1f4f530a1d26c01"
     },
     "com.cysharp.unitask": {
-      "version": "git+ssh://git@github.com/Cysharp/UniTask.git?path=/src/UniTask/Assets/Plugins/UniTask/#2.5.0",
+      "version": "git+ssh://git@github.com/Cysharp/UniTask.git?path=/src/UniTask/Assets/Plugins/UniTask/#2.5.10",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "56662924960a53695a640af80125f1cfd334d5ee"
+      "hash": "7c0f199fe0d3fc528024488ccd671e6c7b27745b"
     },
     "com.cysharp.zlogger": {
-      "version": "git+ssh://git@github.com/Cysharp/ZLogger.git?path=src/ZLogger.Unity/Assets/ZLogger.Unity#2.1.0",
+      "version": "git+ssh://git@github.com/Cysharp/ZLogger.git?path=src/ZLogger.Unity/Assets/ZLogger.Unity#2.5.10",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "cbb369db21e0e18ef4ae3f7e9e83a5e54a035198"
+      "hash": "e03df464106e2ca192eefe43c6a2785a587aa862"
     },
     "com.github-glitchenzo.nugetforunity": {
-      "version": "git+ssh://git@github.com/GlitchEnzo/NuGetForUnity.git?path=/src/NuGetForUnity#v4.0.2",
+      "version": "git+ssh://git@github.com/GlitchEnzo/NuGetForUnity.git?path=/src/NuGetForUnity#v4.2.0",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "a9e8c39d86c91a193be2dd24bb564a1d130d7c2d"
+      "hash": "16d624d3f9425595fd07c762c7af5f431ed4aa9d"
     },
     "com.unity.2d.animation": {
       "version": "10.1.4",
@@ -330,18 +332,18 @@
       "url": "https://packages.unity.com"
     },
     "jp.hadashikick.vcontainer": {
-      "version": "git+ssh://git@github.com/hadashiA/VContainer.git?path=/VContainer/Assets/VContainer/#master",
+      "version": "git+ssh://git@github.com/hadashiA/VContainer.git?path=/VContainer/Assets/VContainer/#1.16.8",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "d37fb21ba4d17f3a80effdc8119d985d8d150ebe"
+      "hash": "5e6f5cc14b6dc8b94251bf6c0d6c37025a6ecf77"
     },
     "jp.hadashikick.vitalrouter": {
-      "version": "git+ssh://git@github.com/hadashiA/Vitalrouter.git?path=/VitalRouter.Unity/Assets/VitalRouter#0.2.0",
+      "version": "git+ssh://git@github.com/hadashiA/Vitalrouter.git?path=/src/VitalRouter.Unity/Assets/VitalRouter#1.6.2",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "326eb5b66148826152cf1cadd6a4121394b80f89"
+      "hash": "f82020129992bf42d26c4028b3479096886bc48a"
     },
     "com.unity.modules.accessibility": {
       "version": "1.0.0",
